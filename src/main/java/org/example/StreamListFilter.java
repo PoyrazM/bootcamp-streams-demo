@@ -68,9 +68,9 @@ public class StreamListFilter {
         Predicate<String> airlineFilterCondition = airline -> airline.equals(airlineName);
 
         filteredAirlinesList = airlinesList
-                .stream()
+                    .stream()
                     .filter(airlineFilterCondition)
-                .limit(2)
+                    .limit(2)
                 .toList();
 
         checkValidAirlinesControl(filteredAirlinesList);
