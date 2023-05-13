@@ -16,9 +16,9 @@ public class StreamListFilter {
 
         List<String> airlinesList = Arrays.asList(PEGASUS, THY, PEGASUS, SUN_EXPRESS, ANADOLU_JET, PEGASUS);
 
-//       airlinesFilter(airlinesList);
+       airlinesFilter(airlinesList);
 
-        streamAirlinesFilter(airlinesList);
+//        streamAirlinesFilter(airlinesList);
     }
 
     /**
@@ -37,11 +37,13 @@ public class StreamListFilter {
         System.out.println("Selected Airline : " + airlineName);
 
         for (String airline : airlinesList) {
-            boolean isEqualsAirline = airline.equals(airlineName);
 
+            boolean isEqualsAirline = airline.equals(airlineName);
             if (isEqualsAirline) {
                 filteredAirlinesList.add(airline);
-                if (filteredAirlinesList.size() == 2) break;
+
+                boolean isAirlinesSizeTwo = filteredAirlinesList.size() == 2;
+                if (isAirlinesSizeTwo) break;
             }
         }
 
