@@ -6,7 +6,7 @@ import java.util.function.*;
 public class StreamListFilter {
 
     private static final Scanner sc = new Scanner(System.in);
-    
+
     private static final String PEGASUS = "pegasus";
     private static final String THY = "thy";
     private static final String SUN_EXPRESS = "sunexpress";
@@ -21,6 +21,10 @@ public class StreamListFilter {
         streamAirlinesFilter(airlinesList);
     }
 
+    /**
+     * For each kullanılarak airline filtrelemesi yapar.
+     * @param airlinesList içine Airline'ların olduğu bir liste alır.
+     */
     private static void airlinesFilter(List<String> airlinesList) {
         List<String> filteredAirlinesList = new ArrayList<>();
 
@@ -44,6 +48,10 @@ public class StreamListFilter {
         checkValidAirlinesControl(filteredAirlinesList);
     }
 
+    /**
+     * Stream filter kullanılarak airline filtrelemesi yapar.
+     * @param airlinesList içine Airline'ların olduğu bir liste alır.
+     */
     private static void streamAirlinesFilter(List<String> airlinesList) {
         List<String> filteredAirlinesList;
 
