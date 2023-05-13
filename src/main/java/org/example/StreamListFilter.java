@@ -74,6 +74,10 @@ public class StreamListFilter {
         checkValidAirlinesControl(filteredAirlinesList);
     }
 
+    /**
+     * Validasyon metotudur. Kullanıcıya olası bir yanlış input verişinde hata döner, eğer doğru airline ismi verirse de listeyi ve listede kaç tane uçuş olduğunu gösterir.
+     * @param filteredAirlinesList
+     */
     private static void checkValidAirlinesControl(List<String> filteredAirlinesList) {
         if (filteredAirlinesList.isEmpty()) System.out.println("Invalid airline name , please try again !");
         else System.out.println(filteredAirlinesList + ", List size = " + filteredAirlinesList.size());
